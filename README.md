@@ -1,5 +1,5 @@
 ## Install first  
-<pre>yarn install / npm install</pre>
+<pre>npm install</pre>
 
 ## Run using  yarn start
 
