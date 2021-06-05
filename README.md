@@ -3,4 +3,6 @@
 
 ## Run using  yarn start
 
-## Take this repository and who knows gitlab
+## Clone this repository 
+
+## Start working
