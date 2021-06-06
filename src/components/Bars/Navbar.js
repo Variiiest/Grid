@@ -1,4 +1,26 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+const NavbarData=[
+    {
+       name:'Hospitals',
+       url:'/hospitals',
+    },
+    {
+        name:'Medical Store',
+        url:'/groceries',
+     },
+     {
+        name:'Doctors',
+        url:'/doctors',
+     },
+     {
+        name:'',
+        url:'',
+     },
+
+]
+
 export default function Navbar() {
     const [show, setShow] = useState(null);
     const [profile, setProfile] = useState(false);
@@ -94,12 +116,12 @@ export default function Navbar() {
                             <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                                 <div className="flex items-center">
                                   
-                                    <h2 className="hidden sm:block text-xl text-gray-700 font-bold leading-normal pl-3">The Grid</h2>
+                                    <Link to="/" className="hidden sm:block text-xl text-gray-700 font-bold leading-normal pl-3">The Grid</Link>
                                 </div>
                             </div>
                             <div className="flex">
                                 <div className="hidden xl:flex md:mr-6 xl:mr-16">
-                                    <a href="#_" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                                    <Link to="/hospitals" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -110,8 +132,8 @@ export default function Navbar() {
                                             </svg>
                                         </span>
                                         Hospitals
-                                    </a>
-                                    <a href="#_" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                                    </Link>
+                                    <Link to="/groceries" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -119,8 +141,8 @@ export default function Navbar() {
                                             </svg>
                                         </span>
                                         Grocery
-                                    </a>
-                                    <a href="#_" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                                    </Link>
+                                    <Link to="/doctors" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -129,8 +151,8 @@ export default function Navbar() {
                                             </svg>
                                         </span>
                                         Doctors
-                                    </a>
-                                    <a href="#_" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                                    </Link>
+                                    <Link to="/chat" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -140,12 +162,13 @@ export default function Navbar() {
                                             </svg>
                                         </span>
                                         Chat
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="hidden xl:flex items-center">
                                 {!authenticated &&
                                     <div className="relative md:mr-6 my-2">
-                                        <button className="focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">Login</button>
+                                        <Link to="/login">
+                                        <button className="focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">Login</button></Link>
                                     </div>}
                                     {authenticated &&
                                     <div className="ml-6 relative">
@@ -258,7 +281,7 @@ export default function Navbar() {
                                             </div>
                                         </div>
                                         <ul className="f-m-m">
-                                            <a href="#_" className="cursor-pointer">
+                                            <Link to="#_" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-10">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -273,8 +296,8 @@ export default function Navbar() {
                                                         <p className="text-indigo-700 xl:text-base text-base ml-3">Hospitals</p>
                                                     </div>
                                                 </li>
-                                            </a>
-                                            <a href="#_" className="cursor-pointer">
+                                            </Link>
+                                            <Link href="#_" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
@@ -288,8 +311,8 @@ export default function Navbar() {
                                                         </div>
                                                     </div>
                                                 </li>
-                                            </a>
-                                            <a href="#_" className="cursor-pointer">
+                                            </Link>
+                                            <Link href="#_" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
@@ -302,7 +325,7 @@ export default function Navbar() {
                                                         <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">Doctors</p>
                                                     </div>
                                                 </li>
-                                            </a>
+                                            </Link>
                                             <li className="text-gray-800 pt-8 cursor-pointer">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center">
@@ -314,7 +337,7 @@ export default function Navbar() {
                                                                 <line x1={14} y1={4} x2={10} y2={20} />
                                                             </svg>
                                                         </div>
-                                                        <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">Chat</p>
+                                                        <Link to="" className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">Chat</Link>
                                                     </div>
                                                 </div>
                                             </li>

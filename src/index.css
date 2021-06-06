@@ -4,8 +4,11 @@
 
 
 
+.bg-primary{
+  @apply bg-white ;
+}
 
-.btn-primary{
-    @apply w-full px-8 py-3 text-base leading-6 text-white bg-blue-700 border border-transparent md:w-auto hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 rounded;
-  };
+.bg-secondary{
+  @apply bg-green-50;
+}
 

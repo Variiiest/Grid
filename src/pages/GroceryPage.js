@@ -1,11 +1,10 @@
 import React from 'react'
 import Hospitalcard from '../components/Cards/Hospitalcard'
 
-export default function HospitalMain() {
+export default function GroceryPage() {
     return (
         <div>
-            <Hospitalcard name="hospitals"/>
-            
+            <Hospitalcard name="Grocery"/>
         </div>
     )
 }

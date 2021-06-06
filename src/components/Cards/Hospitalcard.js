@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Search from './Search'
 
-export default function Hospitalcard() {
+export class Hospitalcard extends Component {
+  render() {
     return (
-        <div>
+      <div>
+              <div>
 
-<div className="container px-5 pb-12 mx-auto">
+<div className="container px-5 py-24 mx-auto">
+<Search/>
         <div className="flex items-center justify-between w-full my-4 pl-4 sm:pr-4">
+        
           <div className="mr-6">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-7 md:leading-10 mb-1">Search results</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-7 md:leading-10 mb-1">Search results {this.props.name}</h2>
             <div className="font-base tracking-tight text-gray-600">Lorem ipsum is placeholder text commonly used in the graphic.</div>
           </div>
           <div className="flex items-center">
@@ -158,7 +163,10 @@ export default function Hospitalcard() {
 </div>
         </div>
       </div>
-    
-       ' </div>
+    </div>
+      </div>
     )
+  }
 }
+
+export default Hospitalcard
