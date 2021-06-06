@@ -8,7 +8,8 @@ import HospitalMain from './pages/HospitalMain';
 import GroceryPage from './pages/GroceryPage';
 import GroceryDetail from './pages/GroceryDetail';
 import DoctorPage from './pages/DoctorPage';
-import Login from './components/Auth/Login';
+import Dashboard from './components/dashboard/dashboard';
+import AuthPage from './pages/AuthPage';
 
 
 function App() {
@@ -16,8 +17,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar/>
-      
-            
+    
       <Route exact path="/">
         <HomePage/>
 
@@ -40,9 +40,12 @@ function App() {
       </Route>
 
       <Route path="/login">
-        <Login/>
+        <AuthPage/>
       </Route>
-
+      
+      <Route path="/dashboard">
+        <Dashboard/>
+      </Route>
 
       <Footer/>
       </Router>

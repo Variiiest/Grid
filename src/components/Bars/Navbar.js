@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavbarData=[
-    {
-       name:'Hospitals',
-       url:'/hospitals',
-    },
-    {
-        name:'Medical Store',
-        url:'/groceries',
-     },
-     {
-        name:'Doctors',
-        url:'/doctors',
-     },
-     {
-        name:'',
-        url:'',
-     },
+// const NavbarData=[
+//     {
+//        name:'Hospitals',
+//        url:'/hospitals',
+//     },
+//     {
+//         name:'Medical Store',
+//         url:'/groceries',
+//      },
+//      {
+//         name:'Doctors',
+//         url:'/doctors',
+//      },
+//      {
+//         name:'',
+//         url:'',
+//      },
 
-]
+// ]
 
 export default function Navbar() {
     const [show, setShow] = useState(null);
