@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import DetailCard from '../components/Cards/DetailCard'
+import ProfileCard from '../components/dashboard/ProfileCard'
 
 export class HospitalDetail extends Component {
     render() {
         return (
-            <div>
-                <DetailCard/>
+            <div className="max-w-7xl mx-auto">
+               <ProfileCard/>
             </div>
         )
     }

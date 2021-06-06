@@ -10,6 +10,7 @@ import GroceryDetail from './pages/GroceryDetail';
 import DoctorPage from './pages/DoctorPage';
 import Dashboard from './components/dashboard/dashboard';
 import AuthPage from './pages/AuthPage';
+import HospitalDetail from './pages/HospitalDetail';
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
       
       <Route path="/dashboard">
         <Dashboard/>
+      </Route>
+      <Route path="/hosptialname">
+        <HospitalDetail/>
       </Route>
 
       <Footer/>

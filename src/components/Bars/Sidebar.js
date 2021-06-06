@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProfileCard from "../dashboard/ProfileCard";
+import Table from "../dashboard/Table";
 export default function Sidebar() {
     const [show, setShow] = useState(false);
 
@@ -13,40 +14,27 @@ export default function Sidebar() {
                             <ul className="mt-4">
                                 <li className="flex w-full justify-between text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Dashboard</span>
-                                    </div>
-                                    <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">5</div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Products</span>
-                                    </div>
-                                    <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">8</div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Performance</span>
+                                        <span className="text-sm">Appointments</span>
                                     </div>
                                 </li>
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Deliverables</span>
+                                        <span className="text-sm">Orders</span>
                                     </div>
                                 </li>
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Invoices</span>
+                                        <span className="text-sm">Tests</span>
                                     </div>
-                                    <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">25</div>
                                 </li>
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Inventory</span>
-                                    </div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center">
                                     <div className="flex items-center">
                                         <span className="text-sm">Settings</span>
+                                    </div>
+                                </li>
+                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
+                                    <div className="flex items-center">
+                                        <span className="text-sm">Terms</span>
                                     </div>
                                 </li>
                             </ul>
@@ -160,6 +148,7 @@ export default function Sidebar() {
                         </nav>
                         <div className="container mx-auto sm:-pt-24 px-6">
                             <ProfileCard/>
+                            <Table/>
                         </div>
                     </div>
                 </div>
