@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TabsHospitals from '../components/Auth/TabHospitals'
 import ProfileCard from '../components/dashboard/ProfileCard'
 
 export class HospitalDetail extends Component {
@@ -6,6 +7,7 @@ export class HospitalDetail extends Component {
         return (
             <div className="max-w-7xl mx-auto">
                <ProfileCard/>
+               <TabsHospitals/>
             </div>
         )
     }

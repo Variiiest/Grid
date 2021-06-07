@@ -115,8 +115,8 @@ export default function Navbar() {
                             </div>
                             <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                                 <div className="flex items-center">
-                                  
-                                    <Link to="/" className="hidden sm:block text-xl text-gray-700 font-bold leading-normal pl-3">The Grid</Link>
+                                    <img src="/" alt="" className="w-16 h-16"/>
+                                    <Link to="/" className="hidden sm:block text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-green-300 leading-normal pl-3">MEDUSA</Link>
                                 </div>
                             </div>
                             <div className="flex">
@@ -168,7 +168,7 @@ export default function Navbar() {
                                 {!authenticated &&
                                     <div className="relative md:mr-6 my-2">
                                         <Link to="/login">
-                                        <button className="focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">Login</button></Link>
+                                        <button className="btn-primary">Login</button></Link>
                                     </div>}
                                     {authenticated &&
                                     <div className="ml-6 relative">
