@@ -9,7 +9,6 @@ const Tabs = ({ color }) => {
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tablist"
           >
                 
             <li className="mr-2 last:mr-0 flex-auto text-center">
@@ -75,14 +74,7 @@ const Tabs = ({ color }) => {
                  <ListCard/>
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
-                  </p>
+                 <ListCard/>
                 </div>
               </div>
             </div>

@@ -15,10 +15,10 @@ const TabsAuth = ({ color }) => {
             <li className="mr-2 last:mr-0 flex-auto text-center">
              <p
                 className={
-                  "text-base px-5 py-3 block leading-normal " +
+                  "text-basepx-5 py-2 block leading-normal " +
                   (openTab === 1
-                    ? "text-gray-600 bg-white border-b-2 shadow-xl border-" + color + "-600"
-                    : "text-" + color + "-600 bg-gray-50")
+                    ? "text-gray-600 bg-green-100 rounded-full shadow border-" + color + "-600"
+                    : "text-" + color + "-600 ")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -26,16 +26,16 @@ const TabsAuth = ({ color }) => {
                 }}
                 data-toggle="tab"
               >
-                Users
+                Patient
              </p>
             </li>
             <li className="mr-2 last:mr-0 flex-auto text-center">
              <p
                 className={
-                  "text-base  px-5 py-3 block leading-normal " +
+                  "text-base px-5 py-2 block leading-normal " +
                   (openTab === 2
-                    ? "text-gray-600 bg-white border-b-2 shadow-xl border-" + color + "-600"
-                    : "text-" + color + "-600 bg-gray-50")
+                    ? "text-gray-600 bg-green-100 rounded-full shadow border-" + color + "-600"
+                    : "text-" + color + "-600 ")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -50,10 +50,10 @@ const TabsAuth = ({ color }) => {
             <li className="mr-2 last:mr-0 flex-auto text-center">
              <p
                 className={
-                  "text-base px-5 py-3 block leading-normal " +
+                  "text-basepx-5 py-2 block leading-normal " +
                   (openTab === 3
-                    ? "text-gray-600 bg-white border-b-2 shadow-xl border-" + color + "-600"
-                    : "text-" + color + "-600 bg-gray-50")
+                    ? "text-gray-600 bg-green-100 rounded-full shadow border-" + color + "-600"
+                    : "text-" + color + "-600 ")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -64,23 +64,7 @@ const TabsAuth = ({ color }) => {
                Doctors
              </p>
             </li>
-            <li className="mr-2 last:mr-0 flex-auto text-center">
-             <p
-                className={
-                  "text-base px-5 py-3 block leading-normal " +
-                  (openTab === 4
-                    ? "text-gray-600 bg-white border-b-2 shadow-xl border-" + color + "-600"
-                    : "text-" + color + "-600 bg-gray-50")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(4);
-                }}
-                data-toggle="tab"
-              >
-               Vendors
-             </p>
-            </li>
+           
           </ul>
           <div className="relative flex flex-col min-w-0 w-full mb-6 rounded">
             <div className="py-5 flex-auto">
@@ -92,14 +76,7 @@ const TabsAuth = ({ color }) => {
                  <Login/>
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
-                  </p>
+                  <Login/>
                 </div>
               </div>
             </div>

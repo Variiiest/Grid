@@ -116,7 +116,7 @@ export default function Navbar() {
                             <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                                 <div className="flex items-center">
                                     <img alt="/" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" className="w-12 h-12"/>
-                                    <Link to="/" className="hidden sm:block text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-green-300 leading-normal pl-3">MEDUSA</Link>
+                                    <Link to="/" className="hidden sm:block text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-green-300 leading-normal pl-3">THEGRID</Link>
                                 </div>
                             </div>
                             <div className="flex">
@@ -131,7 +131,7 @@ export default function Navbar() {
                                                 <rect x={14} y={14} width={6} height={6} rx={1} />
                                             </svg>
                                         </span>
-                                        Hospitals
+                                        Labs
                                     </Link>
                                     <Link to="/groceries" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
@@ -140,7 +140,7 @@ export default function Navbar() {
                                                 <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
                                             </svg>
                                         </span>
-                                        Grocery
+                                       Doctors
                                     </Link>
                                     <Link to="/doctors" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
@@ -150,7 +150,7 @@ export default function Navbar() {
                                                 <circle cx={12} cy={12} r={9} />
                                             </svg>
                                         </span>
-                                        Doctors
+                                        Medicines
                                     </Link>
                                     <Link to="/chat" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
@@ -161,7 +161,7 @@ export default function Navbar() {
                                                 <line x1={14} y1={4} x2={10} y2={20} />
                                             </svg>
                                         </span>
-                                        Chat
+                                       Guides
                                     </Link>
                                 </div>
                                 <div className="hidden xl:flex items-center">
@@ -356,6 +356,7 @@ export default function Navbar() {
                                                 <input className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2" type="text" placeholder="Search" />
                                             </div>
                                         </div>
+
                                         <div className="border-t border-gray-300">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
@@ -384,6 +385,7 @@ export default function Navbar() {
                                                 </ul>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>

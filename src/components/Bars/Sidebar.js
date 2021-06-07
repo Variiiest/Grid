@@ -6,12 +6,12 @@ export default function Sidebar() {
 
     return (
         <>
-            <div className="w-full h-full sm:pt-0 pt-20">
+            <div className="w-full h-full sm:pt-0 pt-20 bg-gray-50">
                 <div className="flex flex-no-wrap">
                     {/* Sidebar starts */}
-                    <div className="w-64 absolute lg:relative bg-white shadow h-screen flex-col justify-between hidden lg:flex pb-12">
-                        <div className="px-8">
-                            <ul className="mt-4">
+                    <div className="w-64 absolute lg:relative h-screen flex-col justify-between hidden lg:flex pb-12">
+                        <div className="px-12">
+                            <ul className="mt-6">
                                 <li className="flex w-full justify-between text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
                                         <span className="text-sm">Appointments</span>

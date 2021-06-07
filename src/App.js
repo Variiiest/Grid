@@ -9,8 +9,8 @@ import GroceryPage from './pages/GroceryPage';
 import GroceryDetail from './pages/GroceryDetail';
 import DoctorPage from './pages/DoctorPage';
 import Dashboard from './components/dashboard/dashboard';
-import AuthPage from './pages/AuthPage';
 import HospitalDetail from './pages/HospitalDetail';
+import LoginUser from './components/Auth/LoginUser';
 
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
       </Route>
 
       <Route path="/login">
-        <AuthPage/>
+        <LoginUser/>
       </Route>
       
       <Route path="/dashboard">
