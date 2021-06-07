@@ -1,39 +1,40 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class FeaturesCard extends Component {
     render() {
         return (
             <div className="flex flex-wrap mt-6">
+              
         <div className="p-2 md:w-1/3">
-          <div className="h-full bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden">
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog" />
+          <Link to="/groceries">
+          <div className="h-full bg-gradient-to-b from-red-400 to-red-500 shadow-md hover:shadow-lg rounded overflow-hidden">
+            <img className="lg:h-48 md:h-36 w-full object-cover object-center p-2" src="https://ik.imagekit.io/vpa3fwqdnd/Components/undraw_medicine_b1ol_sECinHHbv.svg" alt="blog" />
             <div className="p-2">
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 ">The Catalyzer</h1>
-          
+              <h1 className="title-font text-xl font-medium text-gray-100 ">Search Medicines</h1>
             </div>
 
-          </div>
+          </div></Link>
         </div>
         <div className="p-2 md:w-1/3">
-          <div className="h-full bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden">
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog" />
+        <Link to="/hospitals">
+          <div className="h-full bg-gradient-to-b from-blue-600 to-blue-700 shadow-md hover:shadow-lg rounded overflow-hidden">
+            <img className="lg:h-48 md:h-36 w-full object-cover object-center p-2" src="https://ik.imagekit.io/vpa3fwqdnd/Components/undraw_best_place_r685_apf5-81gg.svg" alt="blog" />
             <div className="p-2">
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 ">The 400 Blows</h1>
-          
+              <h1 className="title-font text-xl font-medium text-gray-100 ">Search Hospitals</h1>
             </div>
-          </div>
+          </div></Link>
         </div>
         <div className="p-2 md:w-1/3">
-          <div className="h-full bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden">
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog" />
+        <Link to="/doctors">
+          <div className="h-full  bg-gradient-to-b from-green-400 to-green-500 shadow-md hover:shadow-lg rounded overflow-hidden">
+            <img className="lg:h-48 md:h-36 w-full object-cover object-center p-2" src="https://ik.imagekit.io/vpa3fwqdnd/Components/undraw_medical_care_movn_LIKCGrzB4.svg" alt="blog" />
             <div className="p-2">
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 ">Shooting Stars</h1>
+              <h1 className="title-font text-xl font-medium text-gray-100 ">Search Doctors</h1>
         
             </div>
           </div>
+          </Link>
         </div>
       </div>
         )

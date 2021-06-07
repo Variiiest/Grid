@@ -115,7 +115,7 @@ export default function Navbar() {
                             </div>
                             <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                                 <div className="flex items-center">
-                                    <img src="/" alt="" className="w-16 h-16"/>
+                                    <img alt="/" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" className="w-12 h-12"/>
                                     <Link to="/" className="hidden sm:block text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-green-300 leading-normal pl-3">MEDUSA</Link>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@ export default function Navbar() {
                                 <div className="hidden xl:flex md:mr-6 xl:mr-16">
                                     <Link to="/hospitals" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid text-blue-700" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
                                                 <rect x={4} y={4} width={6} height={6} rx={1} />
                                                 <rect x={14} y={4} width={6} height={6} rx={1} />
