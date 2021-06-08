@@ -1,5 +1,5 @@
 import React ,{ useState}from 'react'
-import HeatMap from '../dashboard/Heatmap';
+import HeatMap from '../dashboard/HeatMap';
 import MultipleChart from '../dashboard/MultipleChart';
 
 export default function Governent() {
