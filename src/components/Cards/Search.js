@@ -25,12 +25,12 @@ export class Search extends Component {
         
     render() {
         return (
-            <div className="lg:flex-grow lg:w-2/3 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
-            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full bg-white shadow">
+            <div className="lg:flex-grow lg:w-2/3 pl-4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
+            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full bg-white border hover:borer-blue-600">
           <input type="text" name="search" placeholder="Search" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
             <button onClick={this.handleClick}
               type="button"
-              className="inline-flex items-center w-32 h-12 px-8 m-2 text-base leading-6 text-gray-100 transition duration-150 ease-in-out bg-blue-700 border border-transparent hover:bg-blue-600 focus:outline-none rounded-full"
+              className="inline-flex items-center btn-primary m-2"
             >
               Search
             </button>

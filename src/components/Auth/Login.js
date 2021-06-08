@@ -94,7 +94,7 @@ export default function Login() {
               <div className="max-w-lg mx-auto mb-6">
                 <p className="text-gray-300 leading-loose" data-config-id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
               </div>
-              <a className="inline-block py-2 px-6 rounded-t-xl leading-loose rounded-l-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold transition duration-200" href="#" data-config-id="post-primary-action">Get Started</a>
+              <a className="inline-block py-2 px-6 rounded-t-xl leading-loose rounded-l-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold transition duration-200" href="#_" data-config-id="post-primary-action">Get Started</a>
               <div className="mt-12 flex justify-center space-x-3">
                 <button className="p-1 bg-gray-500 rounded-full" />
                 <button className="p-1 bg-gray-500 rounded-full" />
@@ -116,7 +116,7 @@ export default function Login() {
             <div className="py-10 px-3 text-center" style={{zIndex: 10}}>
               <h2 className="mb-2 text-2xl font-bold" data-config-id="title">So much more than a business analytics tool</h2>
               <p className="mb-6 text-gray-500 leading-loose" data-config-id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-              <a className="inline-block py-2 px-6 rounded-t-xl rounded-l-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold transition duration-200" href="#" data-config-id="post-primary-action">Get Started</a>
+              <a className="inline-block py-2 px-6 rounded-t-xl rounded-l-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold transition duration-200" href="#_">Get Started</a>
             </div>
           </div>
         </div>
