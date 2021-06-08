@@ -44,7 +44,7 @@ export default function Gridfour() {
           <div className="flex flex-wrap -m-4">
             {CommunityGuides.map((data, key)=>(
             <div className="p-4 md:w-1/4">
-              <div className="h-full bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+              <div className="h-full bg-white hover:shadow-lg shadow rounded overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center bg-green-400" src={data.cardimage} alt="blog" />
                 <div className="p-6">
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{data.cardheading}</h1>

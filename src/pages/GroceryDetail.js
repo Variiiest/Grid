@@ -4,7 +4,7 @@ import DetailCard from '../components/Cards/DetailCard'
 export class GroceryDetail extends Component {
     render() {
         return (
-            <div>
+            <div className="bg-green-50">
           <DetailCard/>
             </div>
         )

@@ -11,6 +11,7 @@ import DoctorPage from './pages/DoctorPage';
 import Dashboard from './components/dashboard/dashboard';
 import HospitalDetail from './pages/HospitalDetail';
 import LoginUser from './components/Auth/LoginUser';
+import DashDoctor from './components/dashboard/DashDoctor';
 
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
       <Route path="/dashboard">
         <Dashboard/>
       </Route>
+      <Route path="/dashboarddoctor">
+        <DashDoctor/>
+      </Route>
+
       <Route path="/hosptialname">
         <HospitalDetail/>
       </Route>

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import TabsHospitals from '../components/Auth/TabHospitals'
+import TestTable from '../components/Auth/TestTable'
 import ProfileCard from '../components/dashboard/ProfileCard'
 
 export class HospitalDetail extends Component {
     render() {
         return (
-            <div className="max-w-7xl mx-auto">
+            <div className="bg-gray-50">
+                <div className="max-w-7xl mx-auto">
                <ProfileCard/>
-               <TabsHospitals/>
+               <TestTable/>
+               </div>
             </div>
         )
     }

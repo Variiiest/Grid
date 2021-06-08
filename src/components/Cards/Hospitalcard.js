@@ -37,7 +37,7 @@ export class Hospitalcard extends Component {
 
           <div className="hover:bg-white hover:shadow p-5 rounded">
         <div className="flex"> 
-          <img alt="mountain" className="w-36 h-36 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
+          <img alt="mountain" className="w-36 h-36 rounded" src={data.image} />
           <div id="body" className="flex flex-col ml-5">
           <h2 className="flex-auto lg:text-2xl font-medium text-lg">{data.name}</h2>
           

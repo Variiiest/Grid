@@ -3,7 +3,7 @@ import Hospitalcard from '../components/Cards/Hospitalcard'
 
 export default function HospitalMain() {
     return (
-        <div>
+        <div className="bg-gray-50">
             <Hospitalcard name="hospitals"/>
             
         </div>

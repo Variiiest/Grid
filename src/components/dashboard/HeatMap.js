@@ -107,4 +107,3 @@ export class HeatMap extends Component {
 
 export default HeatMap
 
-

@@ -6,7 +6,7 @@ const TestTable = () => {
         <div className="container py-2 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 overflow-hidden sm:mr-10 px-2 flex items-end justify-start relative">
           <div className="w-full overflow-y-scroll h-full">
-                    <table className="min-w-full bg-white dark:bg-gray-800 py-4">
+                    <table className="min-w-full bg-white shadow border py-4">
                         <thead>
                             <tr className="w-full h-16 border-gray-300 dark:border-gray-200 border-b py-8">
                                
@@ -80,12 +80,23 @@ const TestTable = () => {
                 </div>
           </div>
           <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 sticky top-0">
-              <div className="bg-white p-4">
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Tests</h2>
-            <label className="block flex-1">
-        <input type="date" className="form-input mt-1 block w-full text-gray-700" placeholder="Date" />
-      </label>
-            <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Proceed to checkout</button>
+              <div className="bg-white p-4 shadow border">
+            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Slot Booking</h2>
+            <label className="block flex-1">Date</label>
+        <input type="date" className="focus:outline-none border px-2 py-3 mt-1 block w-full text-gray-700" placeholder="Date" />
+        <label className="block flex-1">Time</label>
+
+        <select  className="focus:outline-none border px-2 py-3 mt-1 block w-full text-gray-700" >
+  <option>7-9 AM</option>
+  <option>9- 11 AM</option>
+  <option>12 -1 PM</option>
+</select>
+
+<p className="pt-2 text-xl">Total Amount :7245 -/Rs</p>
+
+
+     
+            <button className="text-white bg-blue-700 border-0 mt-2 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-base">Proceed to checkout</button>
            
           </div>
           </div>
