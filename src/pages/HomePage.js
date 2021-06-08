@@ -8,7 +8,7 @@ export default function HomePage() {
         <div>
               <SearchCard/>
             
-        <Gridfour />
+        <Gridfour/>
     
         <GridFourSec/>
             

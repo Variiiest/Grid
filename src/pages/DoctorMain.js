@@ -1,10 +1,10 @@
 import React from 'react'
 import Hospitalcard from '../components/Cards/Hospitalcard'
 
-export default function HospitalMain() {
+export default function DoctorMain() {
     return (
         <div className="bg-gray-50">
-            <Hospitalcard name="Labs"/>
+            <Hospitalcard name="Doctors"/>
             
         </div>
     )
