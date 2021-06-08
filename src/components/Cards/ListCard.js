@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class ListCard extends Component {
     render() {
@@ -31,7 +32,8 @@ export class ListCard extends Component {
                 </p>
       
               </nav>
-              <button className="mt-6 btn-primary">Consult</button>
+              <Link to="doctors">
+              <button className="mt-6 btn-primary">Consult</button></Link>
             </div>
        
               </div>
