@@ -7,11 +7,12 @@ import HomePage from './pages/HomePage';
 import HospitalMain from './pages/HospitalMain';
 import GroceryPage from './pages/GroceryPage';
 import GroceryDetail from './pages/GroceryDetail';
-import DoctorPage from './pages/DoctorPage';
 import Dashboard from './components/dashboard/dashboard';
 import HospitalDetail from './pages/HospitalDetail';
 import LoginUser from './components/Auth/LoginUser';
 import DashDoctor from './components/dashboard/DashDoctor';
+import Governent from './components/government/Governent';
+import DoctorMain from './pages/DoctorMain';
 
 
 function App() {
@@ -38,8 +39,9 @@ function App() {
         <GroceryDetail/>
       </Route>
       <Route path="/doctors">
-        <DoctorPage/>
+        <DoctorMain/>
       </Route>
+
 
       <Route path="/login">
         <LoginUser/>
@@ -50,6 +52,9 @@ function App() {
       </Route>
       <Route path="/dashboarddoctor">
         <DashDoctor/>
+      </Route>
+      <Route path="/government">
+        <Governent/>
       </Route>
 
       <Route path="/hosptialname">

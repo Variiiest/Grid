@@ -1,4 +1,6 @@
 import React ,{ useState}from 'react'
+import HeatMap from '../dashboard/Heatmap';
+import MultipleChart from '../dashboard/MultipleChart';
 
 export default function Governent() {
     const [show, setShow] = useState(false);
@@ -13,27 +15,17 @@ export default function Governent() {
                             <ul className="mt-6">
                                 <li className="flex w-full justify-between text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Appointments</span>
+                                        <span className="text-sm">Active Disease HeatMap</span>
                                     </div>
                                 </li>
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Orders</span>
+                                        <span className="text-sm">Disease Graph</span>
                                     </div>
                                 </li>
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
-                                        <span className="text-sm">Tests</span>
-                                    </div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Settings</span>
-                                    </div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Terms</span>
+                                        <span className="text-sm">Area Wise</span>
                                     </div>
                                 </li>
                             </ul>
@@ -146,7 +138,11 @@ export default function Governent() {
                             </div>
                         </nav>
                         <div className="container mx-auto sm:-pt-24 px-6">
-                            
+                            <HeatMap/>
+                            <div className="pt-12">
+
+                            </div>
+                            <MultipleChart/>
                         </div>
                     </div>
                 </div>

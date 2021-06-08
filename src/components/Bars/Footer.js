@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -10,13 +11,13 @@ export default function Footer() {
               <h2 className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">CATEGORIES</h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a href="#_" className="text-gray-300 hover:text-gray-200">First Link</a>
+                  <Link to="/government" className="text-gray-300 hover:text-gray-200">Government</Link>
                 </li>
                 <li>
-                  <a href="#_" className="text-gray-300 hover:text-gray-200">Second Link</a>
+                  <Link to="/dashboarddoctor" className="text-gray-300 hover:text-gray-200">Doctor</Link>
                 </li>
                 <li>
-                  <a href="#_" className="text-gray-300 hover:text-gray-200">Third Link</a>
+                  <Link to="/dashboard" className="text-gray-300 hover:text-gray-200">Dashboard</Link>
                 </li>
                 <li>
                   <a href="#_" className="text-gray-300 hover:text-gray-200">Fourth Link</a>
