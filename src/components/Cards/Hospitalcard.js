@@ -17,7 +17,7 @@ export class Hospitalcard extends Component {
          <path className="vi-primary" d="M13.394,15H34.606L38,41H10Z" style={{fill: 'rgb(43, 19, 193)'}} />  <path className="vi-accent" d="M10,41h0l0.522-4H37.478L38,41H10ZM28,14c0-1.516-.737-5-4-5s-4,3.484-4,5v1H17l0.01-2.951C17.01,9.017,20.053,6,24,6s6.99,3.017,6.99,6.049L31,15H28V14Z" style={{fill: 'rgb(0, 236, 177)'}} />  <path className="vi-prop" d="M17,15L17.009,17l3,0V15H17Zm10.989,0v1.989l3,0L31,15H27.991Z" style={{fill: 'rgb(206, 250, 255)'}} /></svg>
           <div id="body" className="ml-5 mt-3">
           <h2 className="flex-auto text-3xl font-medium text-green-400">Groceries</h2>
-          <h2 className="flex-auto text-2xl py-2 text-gray-600">You can search groceries, order the groceries from nearby stores.</h2>
+          <h2 className="flex-auto text-2xl py-2 text-gray-600 sm:block hidden">You can search groceries, order the groceries from nearby stores.</h2>
           </div>
         </div>
       </div>
@@ -25,18 +25,17 @@ export class Hospitalcard extends Component {
         <div className="flex items-center justify-between w-full my-4 pl-4 sm:pr-4">
         
           <div className="mr-6">
-            <h2 className="text-3xl md:leading-10 mb-1 mt-4">Search results for ={this.props.name}</h2>
-            <div className="font-base tracking-tight text-gray-600">Lorem ipsum is placeholder text commonly used in the graphic.</div>
+            <h2 className="text-2xl md:leading-10 mb-1 mt-4">Search results for "Grocery"</h2>
           </div>
           <div className="flex items-center">
-            <button className="bg-gray-900 px-5 py-2 text-sm shadow-sm font-semibold tracking-wider text-white rounded-full hover:bg-gray-800">Filter</button>
+            <button className="bg-blue-600 px-5 py-2 text-sm shadow tracking-wider text-white rounded hover:bg-blue-800">Filter</button>
           </div>
         </div>
         <div className="grid mt-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
           {HospitalData.map((data,key)=>(
-          <div className="flex flex-col">
+          <div className="flex flex-col p-2">
 
-          <div className="hover:bg-white hover:shadow-xl p-5 rounded-md">
+          <div className="hover:bg-white hover:shadow p-5 rounded">
         <div className="flex"> 
           <img alt="mountain" className="w-36 h-36 rounded-md border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
           <div id="body" className="flex flex-col ml-5">
@@ -53,7 +52,7 @@ export class Hospitalcard extends Component {
                     </div>
             <div className="flex mt-2">
               <Link to={data.slug} >
-            <button className="mb-2 md:mb-0 hover:bg-white hover:shadow-xl px-5 py-2 shadow-sm tracking-wider border text-gray-600 rounded-full hover:bg-gray-100 inline-flex items-center space-x-2 ">
+            <button className="mb-2 md:mb-0 btn-secondary inline-flex items-center space-x-2 ">
                       
                       <span>Book a slot</span>
                     </button>

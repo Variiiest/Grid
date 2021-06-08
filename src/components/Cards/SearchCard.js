@@ -34,7 +34,7 @@ export class SearchCard extends Component {
                  <section className="text-gray-600 body-font bg-green-50">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow lg:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
-            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full bg-white shadow">
+            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded bg-white shadow">
           <input type="text" name="search" placeholder="Search about symptoms" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
             <button onClick={this.handleClick}
               type="button"

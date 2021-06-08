@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HeatMap from "../dashboard/HeatMap";
 import ProfileCard from "../dashboard/ProfileCard";
 import Table from "../dashboard/Table";
 export default function Sidebar() {
@@ -149,6 +150,10 @@ export default function Sidebar() {
                         <div className="container mx-auto sm:-pt-24 px-6">
                             <ProfileCard/>
                             <Table/>
+                            <Table/>
+                            <Table/>
+                            <Table/>
+                            <HeatMap/>
                         </div>
                     </div>
                 </div>
