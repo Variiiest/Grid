@@ -14,7 +14,7 @@
 
 
 .btn-primary{
-  @apply focus:outline-none bg-blue-600 transition duration-150 ease-in-out hover:bg-blue-700 rounded text-white px-6 py-2 text-base;
+  @apply focus:outline-none bg-blue-600 transition duration-150 ease-in-out hover:bg-blue-700 rounded-full text-white px-6 py-2 text-base;
 }
 
 .btn-secondary{

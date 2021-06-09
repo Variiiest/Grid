@@ -36,6 +36,11 @@ export class Search extends Component {
             </button>
           </span>
         </div>
+        <div className="mr-6">
+            {this.state.search?
+            <h2 className="text-2xl md:leading-10 mb-1 mt-4">Search results for {this.state.value} </h2>:null}
+
+          </div>
         </div>
         )
     }

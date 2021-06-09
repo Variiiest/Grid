@@ -28,8 +28,8 @@ export default function Navbar() {
     return (
         <>
                 {/* Code block starts */}
-                <nav className="bg-white shadow xl:block hidden">
-                    <div className="mx-auto container px-6 py-2 xl:py-0">
+                <nav className="bg-white shadow-md xl:block hidden">
+                    <div className="mx-auto container px-6 py-2 xl:py-0 max-w-5xl">
                         <div className="flex items-center justify-between">
                             <div className="inset-y-0 left-0 flex items-center xl:hidden">
                                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
