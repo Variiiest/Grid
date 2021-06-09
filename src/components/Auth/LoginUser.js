@@ -4,8 +4,7 @@ import Register from './Register';
 
 export default function LoginUser() {
   const [openTab, setOpenTab] = React.useState(1);
-  
-
+    
     return (
         <div>
                       <section>

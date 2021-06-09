@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { Component } from 'react'
-const base_url="https://the-grid2.herokuapp.com"
 
 
 export class Login extends Component {
@@ -12,11 +11,15 @@ export class Login extends Component {
       email: this.email,
       password: this.password,
     }
-    axios.post(base_url+'/v1/user/login',data).then(
+    axios.post('/v1/user/login',data).then(
       res=>{
-        localStorage.setItem('token', res.token)
+        localStorage.setItem('token', res.data.payload["auth-token"])
+        console.log(res)
       }
     )
+    .catch(err =>{
+      console.log(err)
+    })
   }
 
 

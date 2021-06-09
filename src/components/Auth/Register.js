@@ -2,8 +2,6 @@ import axios from 'axios';
 import React, { Component } from 'react'
 
 
-
-const base_url="https://the-grid2.herokuapp.com"
 export class Register extends Component {
 
 
@@ -19,7 +17,7 @@ export class Register extends Component {
        age:this.age,
        gender:this.gender,
     }
-    axios.post(base_url+'/v1/user/register',data).then(
+    axios.post('/v1/user/register',data).then(
       res=>{
         console.log(res);
       }
