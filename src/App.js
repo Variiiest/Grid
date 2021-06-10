@@ -9,6 +9,7 @@ import SuspenseTheme from './themes/SuspenseTheme';
 import axios from 'axios';
 import Profile from './pages/Profile';
 import Orders from './pages/OrderPage';
+import Governent from './components/government/Governent';
 
 
 const GroceryDetail = lazy(() => import('./pages/GroceryDetail'))
@@ -82,6 +83,11 @@ export class App extends Component {
        <LoginUser/>
      </Route>
      
+     <Route path="/goverment">
+       <Governent/>
+     </Route>
+
+
     
 
 

@@ -93,8 +93,6 @@ constructor(props) {
 
      <BookCard data={this.state.datalab} />
 
-
-
 </div>
 
 

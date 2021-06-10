@@ -73,7 +73,7 @@ this.setState({search : true})
           
           {this.state.datasymptom.map((data,key)=>(
                 <div key={key}>
-               <ListCard />
+               <ListCard id={data.disease_id} name={data.diseasename} symptoms={data.symptoms} />
                </div>
            ))}
 
