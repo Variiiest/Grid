@@ -83,7 +83,7 @@ export class App extends Component {
        <LoginUser/>
      </Route>
      
-     <Route path="/goverment">
+     <Route path="/government">
        <Governent/>
      </Route>
 

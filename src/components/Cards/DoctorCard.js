@@ -19,7 +19,7 @@ export class DoctorCard extends Component {
           <div id="body" className="flex-col ml-5">
           <h2 className="flex-auto lg:text-2xl font-medium text-lg uppercase">{data.doctorname}</h2>
           
-          <h2 className="flex-auto text-base font-medium py-2">{data.price}</h2>
+          <h2 className="flex-auto text-base font-medium py-2">Price :{data.price} -/only</h2>
           
           <h2 className="flex-auto text-base font-medium py-2 titlecase">{data.skill}</h2>
           <div className="inline-flex items-center">

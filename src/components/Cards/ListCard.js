@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function ListCard(props) {
 
+ 
   const [showModal, setShowModal] = React.useState(false);
   return (
     <div>
@@ -47,18 +48,21 @@ export default function ListCard(props) {
           <div className="py-12 bg-gray-100 bg-opacity-20 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0" id="modal">
             <div role="alert" className="container mx-auto w-11/12 md:w-2/3 max-w-lg">
               <div className="relative py-8 px-5 md:px-10 bg-white shadow-2xl  rounded border">
+
                 <div className="w-full mb-6">
-                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Description</h1>
                   <div className="leading-relaxed text-sm">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
                 </div>
                 <div className="w-full mb-6">
-                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Prescription</h1>
                   <div className="leading-relaxed text-sm">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
                 </div>
                 <div className="w-full mb-6">
-                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+                  <h1 className="title-font font-medium text-base mt-4 text-gray-900">Symptoms</h1>
                   <div className="leading-relaxed text-sm">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
                 </div>
+
+
 
 
 

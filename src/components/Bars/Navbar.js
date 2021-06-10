@@ -140,12 +140,12 @@ export default function Navbar(props) {
 
                                 </div>
                                 <div className="hidden xl:flex items-center">
-                                {props.user &&
+                                {!props.user &&
                                     <div className="relative md:mr-6 my-2">
                                         <Link to="/login">
                                         <button className="btn-primary">Login</button></Link>
                                     </div>}
-                                    {!props.user &&
+                                    {!localStorage.getItem['auth-token'] &&
                                     <div className="ml-6 relative">
                                         <div className="flex items-center relative" onClick={() => setProfile(!profile)}>
                                             {profile && (

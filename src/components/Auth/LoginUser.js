@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 
@@ -12,12 +13,20 @@ export default function LoginUser() {
           <div className="pt-6 lg:pt-16 pb-6 w-full lg:w-1/2">
             <div className="max-w-md mx-auto">
               <div className="mb-6 lg:mb-20 w-full px-3 flex items-center justify-between">
-                <a className="text-3xl font-bold leading-none" href="#_">
-                  <img className="h-12" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" alt="" width="auto" /></a>
+                <Link className="text-3xl font-bold leading-none" to="/">
+                  <img className="h-12" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" alt="" width="auto" /></Link>
+                 
+                  {openTab=== 1 ?
+                 
                   <button className="py-2 px-6 text-xs rounded bg-blue-100 hover:bg-blue-200 text-blue-600 font-bold transition duration-200 focus:outline-none" onClick={e => {
                     e.preventDefault();
                     setOpenTab(2);
-                  }}>Sign In</button>
+                  }}>Sign In</button>:<button className="py-2 px-6 text-xs rounded bg-blue-100 hover:bg-blue-200 text-blue-600 font-bold transition duration-200 focus:outline-none" onClick={e => {
+                    e.preventDefault();
+                    setOpenTab(1);
+                  }}>Sign Up</button>}
+ 
+
                   </div>
               <div>
                
@@ -47,7 +56,7 @@ export default function LoginUser() {
                 <div className={openTab === 2 ? "block" : "hidden"}>
                 <div className="mb-6 px-3">
                   <span className="text-gray-500">Sign In</span>
-                  <h3 className="text-2xl font-bold">Create an account</h3>
+                  <h3 className="text-2xl font-bold">Sign In user</h3>
                 </div>
      
               <Login/>

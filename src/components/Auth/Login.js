@@ -47,7 +47,7 @@ export class Login extends Component {
                     </button>
                   </div>
                   <div className="px-3 text-center">
-                    <button className="mb-2 w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm text-gray-50 transition duration-200" data-config-id="primary-action">Sign Up</button>
+                    <button className="mb-2 w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm text-gray-50 transition duration-200" data-config-id="primary-action">Sign In</button>
                   </div>
 
                  
