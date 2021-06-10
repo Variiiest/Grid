@@ -1,9 +1,49 @@
+import axios from 'axios'
 import React, { Component } from 'react'
 import Navbar from '../components/Bars/Navbar'
 import BookCard from '../components/Cards/BookCard'
-import Search from '../components/Cards/Search'
 
 export class Lab extends Component {
+ 
+constructor(props) {
+        super(props)
+      
+        this.state = {
+           search:false,
+           value:"",
+           datalab:[],
+        }
+        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+      }
+    
+    
+      handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+    
+      handleClick(){
+        
+        this.setState({search : true})
+      }
+
+
+  handleSubmit= e =>{
+    e.preventDefault();
+    axios.get('v1/search/diagnoselab',{params:{key:this.state.value}}).then(
+      res=>{
+        this.setState({datalab:res.data.payload})
+        console.log(res)
+      }
+    )
+    .catch(err =>{
+      console.log(err)
+    })
+  }
+
+
+
     render() {
         return (
             <div className="bg-gray-50">
@@ -31,8 +71,27 @@ export class Lab extends Component {
 
 <div className="container px-5 py-12 mx-auto max-w-5xl">
 
-     <Search/>
-     <BookCard/>
+<div className="lg:flex-grow lg:w-2/3 pl-4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
+            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full shadow-lg bg-white border hover:borer-blue-600">
+          <input type="text" name="search" placeholder="Search" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
+            <button onClick={this.handleSubmit}
+              type="button"
+              className="inline-flex items-center btn-primary m-2"
+            >
+              Search
+            </button>
+          </span>
+        </div>
+        <div className="mr-6">
+            {this.state.search?
+            <h2 className="text-2xl md:leading-10 mb-1 mt-4">Search results for {this.state.value} </h2>:null}
+
+          </div>
+        </div>
+
+
+
+     <BookCard data={this.state.datalab} />
 
 
 

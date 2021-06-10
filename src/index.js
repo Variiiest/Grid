@@ -11,8 +11,8 @@ import axios from 'axios';
 axios.defaults.headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json',
+  'auth-token': localStorage.getItem('auth-token')
 };
-axios.defaults.headers['auth-token'] = localStorage.getItem('auth-token')
 
 axios.defaults.baseURL="https://the-grid2.herokuapp.com"
 ReactDOM.render(
