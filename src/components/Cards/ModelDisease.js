@@ -1,45 +1,10 @@
 import React from 'react'
 
-export default function ListCard() {
-  
-  const [showModal, setShowModal] = React.useState(false);
-  return (
-    <div>
-               
-              <div className="flex flex-col text-left w-full mt-4 mx-auto">
-   <div onClick={() => setShowModal(true)}>
-            <div className="w-full bg-white p-4 shadow-xl">
-              <h2 className="font-medium title-font tracking-wide text-gray-900 mb-4 text-xl sm:text-left pl-2">Disease name</h2>
-              <nav className="flex flex-col sm:items-start sm:text-left items-center -mb-1 space-y-2.5">
-                <p>
-                  <span className="bg-blue-300 text-blue-500 w-6 h-6 mr-2 rounded-full inline-flex items-center justify-center">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} className="w-4 h-4" viewBox="0 0 24 24">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </p>
-                <p>
-                  <span className="bg-blue-300 text-blue-500 w-6 h-6 mr-2 rounded-full inline-flex items-center justify-center">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} className="w-4 h-4" viewBox="0 0 24 24">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </p>
-                <p>
-                  <span className="bg-blue-300 text-blue-500 w-6 h-6 mr-2 rounded-full inline-flex items-center justify-center">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} className="w-4 h-4" viewBox="0 0 24 24">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-                </p>
-      
-              </nav>
-           
-            </div>
-            </div>
-       
-              </div>
-              {showModal?
+export default function ModelDisease() {
+    const [showModal, setShowModal] = React.useState(false);
+    return (
+        <div>
+             {showModal?
       
       <div>
       <div className="py-12 bg-gray-100 bg-opacity-20 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0" id="modal">
@@ -126,6 +91,6 @@ export default function ListCard() {
       
       :null}
 
-    </div>
-  )
+        </div>
+    )
 }

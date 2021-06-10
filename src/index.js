@@ -14,7 +14,7 @@ axios.defaults.headers = {
   'auth-token': localStorage.getItem('auth-token')
 };
 
-axios.defaults.baseURL="https://the-grid2.herokuapp.com"
+axios.defaults.baseURL="http://61000084f1fe.ngrok.io/"
 ReactDOM.render(
   <React.StrictMode>
     <App />

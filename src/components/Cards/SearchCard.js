@@ -1,29 +1,49 @@
 import FeaturesCard from './FeaturesCard';
 import React, { Component } from 'react'
 import ListCard from './ListCard';
+import axios from 'axios';
 
 export class SearchCard extends Component {
-  constructor(props) {
-    super(props)
+   
+constructor(props) {
+  super(props)
+
+  this.state = {
+     search:false,
+     value:"",
+     datasymptom:[],
+  }
+  this.handleClick = this.handleClick.bind(this);
+  this.handleChange = this.handleChange.bind(this);
+}
+
+
+handleChange(event) {
+  this.setState({value: event.target.value});
+}
+
+
+handleClick(){
   
-    this.state = {
-       search:false,
-       value:"",
-    }
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
+  this.setState({search : true})
+}
 
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
+handleSubmit= e =>{
+e.preventDefault();
+axios.get('v1/search/disease',{params:{key:this.state.value}}).then(
+res=>{
+  this.setState({datasymptom:res.data.payload})
+  console.log(res)
+}
+)
+.catch(err =>{
+console.log(err)
+})
+this.setState({search : true})
+}
 
 
-  handleClick(){
-    
-    this.setState({search : true})
-  }
     
   
   render() {
@@ -35,7 +55,7 @@ export class SearchCard extends Component {
           <div className="lg:flex-grow flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
             <div className="flex items-center max-w-md mx-auto overflow-hidden text-center rounded-full bg-white shadow-xl border">
           <input type="text" name="search" placeholder="Search about symptoms" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
-            <button onClick={this.handleClick}
+            <button onClick={this.handleSubmit}
               type="button"
               className="inline-flex items-center btn-primary m-2"
             >
@@ -48,8 +68,15 @@ export class SearchCard extends Component {
         {this.state.search && 
           <div>
           <p className="p-2">Search for "{this.state.value}"</p> 
-          <ListCard/>
-          <ListCard/>
+          
+          
+          {this.state.datasymptom.map((data,key)=>(
+                <div key={key}>
+               <ListCard />
+               </div>
+           ))}
+
+
           </div>
         }
        
