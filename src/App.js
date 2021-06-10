@@ -1,72 +1,129 @@
 import './App.css';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-
-import GroceryDetail from './pages/GroceryDetail';
-import Dashboard from './components/dashboard/dashboard';
-import HospitalDetail from './pages/HospitalDetail';
-import LoginUser from './components/Auth/LoginUser';
-import DashDoctor from './components/dashboard/DashDoctor';
-import Governent from './components/government/Governent';
-import Home from './pages/Home';
+import {lazy,Suspense} from 'react';
+import React, { Component } from 'react'
 import Lab from './pages/Lab';
 import Grocery from './pages/Grocery';
 import Doctors from './pages/Doctors';
+import SuspenseTheme from './themes/SuspenseTheme';
+import axios from 'axios';
+import Profile from './pages/Profile';
+import Orders from './pages/OrderPage';
 
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
+const GroceryDetail = lazy(() => import('./pages/GroceryDetail'))
+const Home = lazy(() => import('./pages/Home'))
+const HospitalDetail = lazy(() => import('./pages/HospitalDetail'))
+const Dashboard = lazy(() => import('./pages/Dashboard'))
+const LoginUser = lazy(() => import('./components/Auth/LoginUser'))
+
+export class App extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       user:"",
+       login:false
+    }
+  }
+  
+  componentDidMount(){  
+    axios.get('/v1/user').then(
+      
+      res=> {
+        this.setState({
+          user:res.data
+        });
+        this.setState({
+          login:true
+        })
+      },
+      err =>{
+        console.log(err)
+      }
+    )
+  }
+
+
+
+
+  render() {
+    return (
+      <div className="App">
+      <Suspense fallback={<SuspenseTheme/>}>
+     <Router>
+    
+     <Route exact path="/">
+       <Home user={this.state.user}/>
+
+     </Route>
+     <Route path="/hospitals">
+       <Lab name="Labs" detail="You can search here about the labs available for tests"/>
+     </Route>
+         
+     <Route path="/groceries">
+       <Grocery name="Groceries" detail="You can search about groceries here medicines or other essentials."/>
+     </Route>
+     <Route path="/groceriesdetail">
+       <GroceryDetail/>
+     </Route>
+
+
      
-      <Route exact path="/">
-        <Home/>
-
-      </Route>
-      <Route path="/hospitals">
-        <Lab/>
-      </Route>
-          
-      <Route path="/groceries">
-        <Grocery/>
-      </Route>
-      <Route path="/groceriesdetail">
-        <GroceryDetail/>
-      </Route>
+     <Route path="/hospitaldetail">
+       <GroceryDetail/>
+     </Route>
+     <Route path="/doctors">
+       <Doctors name="Doctors" detail="Here you can search about the doctors for a particular disease"/>
+     </Route>
 
 
-      
-      <Route path="/hospitaldetail">
-        <GroceryDetail/>
-      </Route>
-      <Route path="/doctors">
-        <Doctors/>
-      </Route>
-
-
-      <Route path="/login">
-        <LoginUser/>
-      </Route>
-      
-      <Route path="/dashboard">
-        <Dashboard/>
-      </Route>
-      <Route path="/dashboarddoctor">
-        <DashDoctor/>
-      </Route>
-      <Route path="/government">
-        <Governent/>
-      </Route>
-
-      <Route path="/hosptialname">
-        <HospitalDetail/>
-      </Route>
-      </Router>
+     <Route path="/login">
+       <LoginUser/>
+     </Route>
+     
     
 
-    </div>
-  );
+
+
+
+
+
+
+{/* User Dashboard */}
+
+<Route path="/dashboard">
+       <Dashboard/>
+     </Route>
+     <Route path="/profile">
+       <Profile/>
+     </Route>
+     <Route path="/appointments">
+       <Orders table_name="Appointments"/>
+     </Route>
+     <Route path="/groceryorders">
+       <Orders table_name="Grocery Orders"/>
+     </Route>
+     <Route path="/tests">
+       <Orders table_name="Lab Tests"/>
+     </Route>
+
+
+     <Route path="/hosptialname">
+       <HospitalDetail/>
+     </Route>
+
+
+
+     </Router>
+     </Suspense>
+   
+
+   </div>
+    )
+  }
 }
 
-export default App;
+export default App
 
 

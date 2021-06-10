@@ -23,10 +23,12 @@ export class Search extends Component {
         this.setState({search : true})
       }
         
+
+
     render() {
         return (
             <div className="lg:flex-grow lg:w-2/3 pl-4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
-            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded bg-white border hover:borer-blue-600">
+            <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full shadow-lg bg-white border hover:borer-blue-600">
           <input type="text" name="search" placeholder="Search" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
             <button onClick={this.handleClick}
               type="button"

@@ -24,26 +24,20 @@ const CommunityGuides=[
     "cardimage":"https://ik.imagekit.io/vpa3fwqdnd/Components/landing.09fa1de1_jirxji2h9.svg",
   }
   ,
-  {
-    "id":4,
-    "slug":"gocoronago",
-    "cardheading":"Go Corona Go",
-    "carddescription":"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
-    "cardimage":"https://ik.imagekit.io/vpa3fwqdnd/Components/landing.09fa1de1_jirxji2h9.svg",
-  }
+
 ]
 
-export default function Gridfour() {
+export default function Toppicks() {
 
     return (
         <div>
             
       <section className="text-gray-600 body-font">
-        <div className="container px-5 pb-12 mx-auto">
+        <div className="container px-5 pb-12 mx-auto max-w-5xl">
           <Heading heading="Community Guides"/>
           <div className="flex flex-wrap -m-4">
             {CommunityGuides.map((data, key)=>(
-            <div className="p-4 md:w-1/4">
+            <div className="p-4 md:w-1/3">
               <div className="h-full bg-white hover:shadow-lg shadow rounded overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center bg-green-400" src={data.cardimage} alt="blog" />
                 <div className="p-6">
