@@ -11,6 +11,7 @@ constructor(props) {
   this.state = {
      search:false,
      value:"",
+     page:1,
      datasymptom:[],
   }
   this.handleClick = this.handleClick.bind(this);
@@ -31,7 +32,7 @@ handleClick(){
 
 handleSubmit= e =>{
 e.preventDefault();
-axios.get('v1/search/disease',{params:{key:this.state.value}}).then(
+axios.get('v1/search/disease',{params:{key:this.state.value, page:this.state.page}}).then(
 res=>{
   this.setState({datasymptom:res.data.payload})
   console.log(res)
@@ -68,7 +69,7 @@ this.setState({search : true})
         {this.state.search && 
           <div>
           <p className="p-2">Search for "{this.state.value}"</p> 
-          
+        
           
           {this.state.datasymptom.map((data,key)=>(
                 <div key={key}>
@@ -79,14 +80,19 @@ this.setState({search : true})
 
           </div>
         }
-       
+           
+      <div className="flex h-12 max-w-lg font-medium rounded-full mt-4 mx-auto">
+
+        <div className="w-full md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in rounded-full">Prev</div>
+        <div className="w-20 ml-2 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full bg-blue-600 text-white ">1</div>
+        <div className="w-full ml-2 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in  rounded-full  ">Next</div>
+ 
+      </div>
 
           </div>
         </div>
       </section>
 
-
-   
             </>
       </div>
     )
