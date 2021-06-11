@@ -1,6 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import {lazy,Suspense} from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import React, { Component } from 'react'
 import Lab from './pages/Lab';
 import Grocery from './pages/Grocery';
@@ -21,80 +21,65 @@ const LoginUser = lazy(() => import('./components/Auth/LoginUser'))
 export class App extends Component {
   constructor(props) {
     super(props)
-  
+
     this.state = {
-       user:"",
-       login:false
+      user: "",
+      login: false
     }
   }
-  
-  componentDidMount(){  
-    axios.get('/v1/user').then(
-      
-      res=>{
-        console.log(res)
-      }
-      // res=> {
-      //   this.setState({
-      //     user:res.data
-      //   });
-      //   this.setState({
-      //     login:true
-      //   })
-      // },
-      // err =>{
-      //   console.log(err)
-      // }
-    )
+
+  componentDidMount() {
+    axios.get('/v1/user/').then(
+      res => {
+        console.log(res.data.payload)
+        console.log("success from frontend")
+      })
+      .catch(err => {
+        if (err.response) {
+          console.log("This is backend error")
+        }
+      })
   }
-
-
-
-
-
 
 
   render() {
     return (
       <div className="App">
-      <Suspense fallback={<SuspenseTheme/>}>
-     <Router>
-    
-     <Route exact path="/">
-       <Home user={this.state.user}/>
+        <Suspense fallback={<SuspenseTheme />}>
+          <Router>
 
-     </Route>
-     <Route path="/hospitals">
-       <Lab name="Labs" detail="You can search here about the labs available for tests"/>
-     </Route>
-         
-     <Route path="/groceries">
-       <Grocery name="Groceries" detail="You can search about groceries here medicines or other essentials."/>
-     </Route>
-     <Route path="/groceriesdetail">
-       <GroceryDetail/>
-     </Route>
+            <Route exact path="/">
+              <Home user={this.state.user} />
 
+            </Route>
+            <Route path="/hospitals">
+              <Lab name="Labs" detail="You can search here about the labs available for tests" />
+            </Route>
 
-     
-     <Route path="/hospitaldetail">
-       <GroceryDetail/>
-     </Route>
-     <Route path="/doctors">
-       <Doctors name="Doctors" detail="Here you can search about the doctors for a particular disease"/>
-     </Route>
+            <Route path="/groceries">
+              <Grocery name="Groceries" detail="You can search about groceries here medicines or other essentials." />
+            </Route>
+            <Route path="/groceriesdetail">
+              <GroceryDetail />
+            </Route>
 
 
-     <Route path="/login">
-       <LoginUser/>
-     </Route>
-     
-     <Route path="/government">
-       <Governent/>
-     </Route>
+
+            <Route path="/hospitaldetail">
+              <GroceryDetail />
+            </Route>
+            <Route path="/doctors">
+              <Doctors name="Doctors" detail="Here you can search about the doctors for a particular disease" />
+            </Route>
 
 
-    
+            <Route path="/login">
+              <LoginUser />
+            </Route>
+
+            <Route path="/government">
+              <Governent />
+            </Route>
 
 
 
@@ -102,36 +87,39 @@ export class App extends Component {
 
 
 
-{/* User Dashboard */}
-
-<Route path="/dashboard">
-       <Dashboard/>
-     </Route>
-     <Route path="/profile">
-       <Profile/>
-     </Route>
-     <Route path="/appointments">
-       <Orders table_name="Appointments"/>
-     </Route>
-     <Route path="/groceryorders">
-       <Orders table_name="Grocery Orders"/>
-     </Route>
-     <Route path="/tests">
-       <Orders table_name="Lab Tests"/>
-     </Route>
-
-
-     <Route path="/hosptialname">
-       <HospitalDetail/>
-     </Route>
 
 
 
-     </Router>
-     </Suspense>
-   
+            {/* User Dashboard */}
 
-   </div>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/appointments">
+              <Orders table_name="Appointments" />
+            </Route>
+            <Route path="/groceryorders">
+              <Orders table_name="Grocery Orders" />
+            </Route>
+            <Route path="/tests">
+              <Orders table_name="Lab Tests" />
+            </Route>
+
+
+            <Route path="/hosptialname">
+              <HospitalDetail />
+            </Route>
+
+
+
+          </Router>
+        </Suspense>
+
+
+      </div>
     )
   }
 }
