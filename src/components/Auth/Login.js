@@ -31,6 +31,10 @@ export class Login extends Component {
       }
     )
     .catch(err =>{
+      if (err.response) {
+        console.log("User not found or Pass doesnt match! Create an Account")
+        alert("User not found or Pass doesnt match! Create an Account")
+      }
       console.log(err)
     })
   }
