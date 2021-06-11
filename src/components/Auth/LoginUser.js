@@ -4,7 +4,7 @@ import Login from './Login';
 import Register from './Register';
 
 export default function LoginUser() {
-  const [openTab, setOpenTab] = React.useState(1);
+  const [openTab, setOpenTab] = React.useState(2);
     
     return (
         <div>
@@ -78,7 +78,7 @@ export default function LoginUser() {
               <div className="max-w-lg mx-auto mb-6">
                 <p className="text-gray-300 leading-loose" data-config-id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
               </div>
-              <a className="inline-block py-2 px-6 rounded leading-loose bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold transition duration-200" href="#_">Get Started</a>
+          
             </div>
           </div>
           <div className="lg:hidden">
@@ -86,9 +86,9 @@ export default function LoginUser() {
               <img className="relative mb-4 object-cover" src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" data-config-id="image" />
             </div>
             <div className="py-10 px-3 text-center" style={{zIndex: 10}}>
-              <h2 className="mb-2 text-2xl font-bold" data-config-id="title">So much more than a business analytics tool</h2>
+              <h2 className="mb-2 text-2xl font-bold" data-config-id="title">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</h2>
               <p className="mb-6 text-gray-500 leading-loose" data-config-id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-              <a className="inline-block py-2 px-6 rounded bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold transition duration-200" href="#_">Get Started</a>
+              
             </div>
           </div>
         </div>
