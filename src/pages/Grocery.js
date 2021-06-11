@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../components/Bars/Footer'
 import Navbar from '../components/Bars/Navbar'
-import BookCard from '../components/Cards/BookCard'
 import Search from '../components/Cards/Search'
+import { GrocerData } from '../dummyjson/GrocerData'
+
+
 
 export class Grocery extends Component {
     render() {
@@ -38,7 +41,31 @@ export class Grocery extends Component {
             
       
                  <Search/>
-                 <BookCard/>  
+                   
+        <div className="grid mt-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+          {GrocerData.map((data,key)=>(
+          <div className="flex flex-col p-2" key={key}>
+ <Link to={data.slug} >
+          <div className="hover:bg-white hover:shadow-lg  rounded-lg p-5">
+        <div className="flex"> 
+          <img alt="mountain" className="w-36 h-36 rounded sm:-ml-0 -ml-12" src={data.image} />
+          <div id="body" className="flex-col ml-5">
+          <h2 className="flex-auto lg:text-2xl font-medium text-lg uppercase">{data.name}</h2>
+          
+          <h2 className="flex-auto text-base font-medium py-2">{data.price}</h2>
+          
+          <h2 className="flex-auto text-base font-medium py-2 titlecase">{data.price}</h2>
+       
+                  
+          </div>
+        </div>
+      </div>
+      </Link>
+
+      </div>
+          ))}
+        </div>
+
             </div>
             <Footer/>
             

@@ -220,7 +220,7 @@ export default function Navbar(props) {
                 </nav>
 
                 <nav>
-                    <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+                    <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed absolute top-0 z-0">
                         <div className="w-24">
                             <Link to="/">
                         <img alt="/" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" className="w-12 h-12"/></Link>

@@ -12,6 +12,8 @@ constructor(props) {
            search:false,
            value:"",
            datalab:[],
+           loaded:false
+
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -34,6 +36,7 @@ constructor(props) {
     axios.get('v1/search/diagnoselab',{params:{key:this.state.value}}).then(
       res=>{
         this.setState({datalab:res.data.payload})
+        this.setState({loaded:true})
         console.log(res)
       }
     )

@@ -13,6 +13,7 @@ export class SearchCard extends Component {
       value: "",
       page: 1,
       datasymptom: [],
+      loaded:false
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -35,6 +36,7 @@ export class SearchCard extends Component {
     axios.get('v1/search/disease', { params: { key: this.state.value, page: this.state.page } }).then(
       res => {
         this.setState({ datasymptom: res.data.payload })
+        this.setState({loaded:true})
         console.log(res)
       }
     )
@@ -70,9 +72,15 @@ export class SearchCard extends Component {
                   <div>
                     <p className="p-2">Search for "{this.state.value}"</p>
 
-                    {this.state.datasymptom.length === 0 &&
+                    {(this.state.datasymptom.length === 0 && this.state.loaded ===false) &&
                          <div className="p-2">
                         <p className="text-2xl animate-pulse">Loading ....</p>
+                        
+                        </div>
+                    }
+                     {(this.state.datasymptom.length === 0 &&this.state.loaded) &&
+                         <div className="p-2">
+                        <p className="text-2xl">No Data Found</p>
                         
                         </div>
                     }

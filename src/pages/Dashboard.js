@@ -8,7 +8,7 @@ import Table from "../components/dashboard/Table";
 
 export default function Dashboard() {
     const [show, setShow] = useState(false);
-
+    
     return (
         <>
         <Navbar/>
@@ -38,13 +38,13 @@ export default function Dashboard() {
                                                     <Link to="/dashboard">
                                                     <span className="xl:text-base md:text-2xl text-base ml-2">Dashboard</span></Link>
                                                 </div>
-                                                <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">5</div>
+                                            
                                             </li>
                                             <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                                 <div className="flex items-center">
                                                     <span className="xl:text-base md:text-2xl text-base ml-2">Products</span>
                                                 </div>
-                                                <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">8</div>
+                                             
                                             </li>
                                             <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                                 <div className="flex items-center">
@@ -56,22 +56,7 @@ export default function Dashboard() {
                                                     <span className="xl:text-base md:text-2xl text-base ml-2">Deliverables</span>
                                                 </div>
                                             </li>
-                                            <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                                <div className="flex items-center">
-                                                    <span className="xl:text-base md:text-2xl text-base ml-2">Invoices</span>
-                                                </div>
-                                                <div className="py-1 px-3 bg-indigo-700 rounded text-white flex items-center justify-center text-xs">25</div>
-                                            </li>
-                                            <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                                <div className="flex items-center">
-                                                    <span className="xl:text-base md:text-2xl text-base ml-2">Inventory</span>
-                                                </div>
-                                            </li>
-                                            <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center">
-                                                <div className="flex items-center">
-                                                    <span className="xl:text-base md:text-2xl text-base ml-2">Settings</span>
-                                                </div>
-                                            </li>
+                                    
                                         </ul>
                                     </div>
                                 </div>
