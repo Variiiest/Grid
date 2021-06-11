@@ -12,7 +12,7 @@ export class Home extends Component {
         return (
             <div>
 
-                <Navbar user={this.props.user}/>
+                <Navbar/>
                 <SearchCard />
               <Toppicks/>
               <Toppicks/>

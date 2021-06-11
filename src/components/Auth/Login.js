@@ -1,10 +1,19 @@
 import axios from 'axios';
 import React, { Component } from 'react'
+import { Redirect } from 'react-router';
 
 
 export class Login extends Component {
     
-
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       redirect: false,
+       isLogin:false
+    }
+  }
+  
 
   handleSubmit= e =>{
     e.preventDefault();
@@ -16,7 +25,9 @@ export class Login extends Component {
     axios.post('/v1/user/login',data).then(
       res=>{
         localStorage.setItem('auth-token', res.data.payload["auth-token"])
+        localStorage.setItem('isLogin', true)
         console.log(res)
+        this.setState({redirect:true})
       }
     )
     .catch(err =>{
@@ -26,7 +37,11 @@ export class Login extends Component {
 
 
 
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/"/>;
+    }
     return (
       <div>
 

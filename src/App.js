@@ -31,19 +31,25 @@ export class App extends Component {
   componentDidMount(){  
     axios.get('/v1/user').then(
       
-      res=> {
-        this.setState({
-          user:res.data
-        });
-        this.setState({
-          login:true
-        })
-      },
-      err =>{
-        console.log(err)
+      res=>{
+        console.log(res)
       }
+      // res=> {
+      //   this.setState({
+      //     user:res.data
+      //   });
+      //   this.setState({
+      //     login:true
+      //   })
+      // },
+      // err =>{
+      //   console.log(err)
+      // }
     )
   }
+
+
+
 
 
 

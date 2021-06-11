@@ -89,8 +89,11 @@ constructor(props) {
           </div>
         </div>
 
-
-
+        {this.state.datalab.length === 0 &&
+        <h2 className="text-gray-900 text-base animate-pulse">
+          Loading ....
+        </h2>
+        }
      <BookCard data={this.state.datalab} />
 
 </div>

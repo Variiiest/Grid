@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 export default function Navbar(props) {
     const [show, setShow] = useState(null);
     const [profile, setProfile] = useState(false);
+    const [isLogin, setLogin]=useState(localStorage.getItem('isLogin'))
+   
+  
+
     return (
         <>
                 {/* Code block starts */}
@@ -140,12 +144,12 @@ export default function Navbar(props) {
 
                                 </div>
                                 <div className="hidden xl:flex items-center">
-                                {!props.user &&
+                                {!isLogin &&
                                     <div className="relative md:mr-6 my-2">
                                         <Link to="/login">
                                         <button className="btn-primary">Login</button></Link>
                                     </div>}
-                                    {!localStorage.getItem['auth-token'] &&
+                                    {isLogin &&
                                     <div className="ml-6 relative">
                                         <div className="flex items-center relative" onClick={() => setProfile(!profile)}>
                                             {profile && (
@@ -159,6 +163,22 @@ export default function Navbar(props) {
                                                             </svg>
                                                             <Link to="/dashboard">
                                                             <span className="ml-2">Dashboard</span></Link>
+                                                        </div>
+                                                    </li>
+                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                                        <div className="flex items-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-user" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                                <circle cx={12} cy={7} r={4} />
+                                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                            </svg>
+                                                            <button className="ml-2" onClick={() =>{
+                                                                localStorage.clear();
+                                                                setLogin()
+                                                               
+                                                                }}>
+                                                                
+                                                                Logout</button>
                                                         </div>
                                                     </li>
                                                     <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
