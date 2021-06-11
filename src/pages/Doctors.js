@@ -46,8 +46,6 @@ console.log(err)
         return (
           <div className="bg-gray-50">
           <Navbar/>
-
-
           <div className="bg-green-50">
 <div className="container px-5 py-12 mx-auto max-w-5xl bg-green-50">
 

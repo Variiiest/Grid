@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Redirect } from 'react-router';
 
+
+
 export default function TabCard(props) {
     const [question, setquestion] = useState(1);
-    
     const [redirect, setRedirect]= useState(false);
      
 
@@ -11,18 +12,23 @@ export default function TabCard(props) {
         return <Redirect to="/doctors"/>;
       }
 
+
     return (
         <div className="pt-2">
             <div className="container mx-auto bg-white">
-                <div className="w-10/12 mx-auto">
+                <div className="w-full p-6 mx-auto text-left">
                     <ul>
-                        <li className="py-6 border-gray-200 border-solid border-b">
-                        <h3 className="text-gray-800 text-base  md:text-xl  xl:text-2xl">{props.name}</h3>
+                        <li className="py-6">
+                        <h3 className="text-gray-800 md:text-xl xl:text-2xl font-semibold">
+                            
+                            {props.name}
+    
+                            </h3>
                                
                         <div className="py-4"> 
-                                <p className="">{props.symptoms}</p>
+                                <p className="px-1">{props.symptoms}</p>
                                 </div>
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between">
                             <h3 className="text-gray-800 text-xl"> More Details</h3>
                                 <div className="cursor-pointer" onClick={() => (question === 0 ? setquestion(null) : setquestion(0))}>
                                     {question === 0 ? (
@@ -43,12 +49,12 @@ export default function TabCard(props) {
                             </div>
                             {question === 0 && 
                             <div>
-                                <h2 className="text-xl text-gray-700 ">Description</h2>
-                            <p className="pt-2 md:pt-3  lg:pt-5 text-gray-800 bg-gray-100 text-sm md:text-base xl:text-lg rounded-b-lg">
+                                <h2 className="text-xl text-gray-700 pt-4 font-semibold">Description</h2>
+                            <p className="pt-2 text-gray-800 text-sm md:text-base xl:text-lg rounded-b-lg">
                             
                                 {props.description} </p>
-                                <h2 className="text-xl text-gray-700">Prescription</h2>
-                            <p className="pt-2 md:pt-3  lg:pt-5 text-gray-800 bg-gray-100 text-sm md:text-base  xl:text-lg rounded-b-lg">{props.prescription} 
+                                <h2 className="text-xl text-gray-700 pt-4 font-semibold">Prescription</h2>
+                            <p className="py-2 text-gray-800 text-sm md:text-base xl:text-lg rounded-b-lg">{props.prescription} 
 
 
                             

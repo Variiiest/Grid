@@ -71,9 +71,10 @@ export class SearchCard extends Component {
                     <p className="p-2">Search for "{this.state.value}"</p>
 
                     {this.state.datasymptom.length === 0 &&
-                      <h2 className="text-gray-900 text-base animate-pulse">
-                        Loading ....
-                      </h2>
+                         <div className="p-2">
+                        <p className="text-2xl animate-pulse">Loading ....</p>
+                        
+                        </div>
                     }
 
 
