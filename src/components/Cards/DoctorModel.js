@@ -22,6 +22,7 @@ export class DoctorModel extends Component {
 
       handleChange(event) {
         this.setState({value: event.target.value})
+        this.setState({checked:false})
       }
 
       
@@ -96,7 +97,7 @@ export class DoctorModel extends Component {
     
        
       {this.state.checked &&
-<SlotList data={this.state.slot_data} doc_id={this.props.doctor_id} disease={this.props.skill} date={this.props.value}/>
+<SlotList data={this.state.slot_data} doc_id={this.props.doctor_id} disease={this.props.skill} date={this.state.value}/>
     }
 
                   <div className="flex items-center w-full">

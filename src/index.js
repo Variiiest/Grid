@@ -14,7 +14,7 @@ axios.defaults.headers = {
   'auth-token': localStorage.getItem('auth-token')
 };
 
-axios.defaults.baseURL="http://af8f4f67d3d4.ngrok.io"
+axios.defaults.baseURL="http://localhost:5000"
 ReactDOM.render(
   <React.StrictMode>
     <App />

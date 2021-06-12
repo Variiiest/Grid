@@ -10,6 +10,7 @@ import axios from 'axios';
 import Profile from './pages/Profile';
 import Orders from './pages/OrderPage';
 import Governent from './components/government/Governent';
+import AppoinmentTable from './pages/AppoinmentTable';
 
 
 const GroceryDetail = lazy(() => import('./pages/GroceryDetail'))
@@ -96,7 +97,7 @@ export class App extends Component {
               <Profile />
             </Route>
             <Route path="/appointments">
-              <Orders table_name="Appointments" />
+              < AppoinmentTable/>
             </Route>
             <Route path="/groceryorders">
               <Orders table_name="Grocery Orders" />
