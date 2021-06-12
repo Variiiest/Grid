@@ -25,6 +25,7 @@ export class App extends Component {
     this.state = {
       user: "",
       login: false
+      
     }
   }
 
