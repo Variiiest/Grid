@@ -15,7 +15,7 @@ constructor(props) {
            loaded:false
 
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
       }
     
@@ -24,12 +24,7 @@ constructor(props) {
         this.setState({value: event.target.value});
       }
     
-    
-      handleClick(){
-        
-        this.setState({search : true})
-      }
-
+  
 
   handleSubmit= e =>{
     e.preventDefault();
@@ -37,12 +32,13 @@ constructor(props) {
       res=>{
         this.setState({datalab:res.data.payload})
         this.setState({loaded:true})
-        console.log(res)
+  
       }
     )
     .catch(err =>{
       console.log(err)
     })
+    this.setState({search : true})
   }
 
 
@@ -87,16 +83,34 @@ constructor(props) {
         </div>
         <div className="mr-6">
             {this.state.search?
-            <h2 className="text-2xl md:leading-10 mb-1 mt-4">Search results for {this.state.value} </h2>:null}
+            <h2 className="text-2xl md:leading-10 mb-1 mt-4">Search results for {this.state.value} 
+
+
+{(this.state.datalab.length === 0 && this.state.loaded ===false) &&
+                         <div className="p-2">
+                        <p className="text-2xl animate-pulse">Loading ....</p>
+                        
+                        </div>
+                    }
+                     {(this.state.datalab.length === 0 &&this.state.loaded) &&
+                         <div className="p-2">
+                        <p className="text-2xl">No Data Found</p>
+                        
+                        </div>
+                    }
+            
+            
+            
+            </h2>:null}
+
+
 
           </div>
         </div>
 
-        {this.state.datalab.length === 0 &&
-        <h2 className="text-gray-900 text-base animate-pulse">
-          Loading ....
-        </h2>
-        }
+  
+
+
      <BookCard data={this.state.datalab} />
 
 </div>

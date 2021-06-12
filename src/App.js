@@ -15,7 +15,6 @@ import Governent from './components/government/Governent';
 const GroceryDetail = lazy(() => import('./pages/GroceryDetail'))
 const Home = lazy(() => import('./pages/Home'))
 const HospitalDetail = lazy(() => import('./pages/HospitalDetail'))
-const Dashboard = lazy(() => import('./pages/Dashboard'))
 const LoginUser = lazy(() => import('./components/Auth/LoginUser'))
 
 export class App extends Component {
@@ -92,9 +91,7 @@ export class App extends Component {
 
             {/* User Dashboard */}
 
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
+        
             <Route path="/profile">
               <Profile />
             </Route>

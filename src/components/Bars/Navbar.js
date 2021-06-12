@@ -161,8 +161,8 @@ export default function Navbar(props) {
                                                                 <circle cx={12} cy={7} r={4} />
                                                                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                                             </svg>
-                                                            <Link to="/dashboard">
-                                                            <span className="ml-2">Dashboard</span></Link>
+                                                            <Link to="/profile">
+                                                            <span className="ml-2">Profile</span></Link>
                                                         </div>
                                                     </li>
                                                     <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">

@@ -21,7 +21,7 @@ export class ProfileCard extends Component {
             })
             .catch(err => {
                 if (err.response) {
-                    console.log("This is backend error")
+                    console.log("User Not Found")
                 }
             })
     }
