@@ -10,7 +10,7 @@ export class AppoinmentTable extends Component {
         super(props)
 
         this.state = {
-            data:"",
+            data:[],
             show:false,
             showdetail:false
         }
@@ -20,8 +20,7 @@ export class AppoinmentTable extends Component {
         axios.get('/v1/user/appointment').then(
             res => {
                 console.log(res.data.payload)
-                this.setState({user: res.data.payload})
-                this.setState({address: res.data.payload.address})
+                this.setState({data: res.data.payload})
             })
             .catch(err => {
                 if (err.response) {
