@@ -9,15 +9,15 @@ export class LineChart extends Component {
     this.state = {
     
       series: [{
-          name: "Disease 1",
+          name: "Covid-19",
           data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
         },
         {
-          name: "Disease 2",
+          name: "Black Fungus",
           data: [15, 51, 18, 14, 13, 16, 11, 10, 16, 81, 5, 0]
         },
         {
-          name: 'Disease 3',
+          name: 'Yellow Fungus',
           data: [8, 7, 4, 11, 5, 38, 62, 47, 12, 56, 45, 47]
         },
     
