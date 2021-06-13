@@ -15,8 +15,8 @@ export default function TabCard(props) {
 
     return (
         <div className="pt-2">
-            <div className="container mx-auto bg-white">
-                <div className="w-full p-6 mx-auto text-left">
+            <div className="container mx-auto bg-green-50 border shadow-2xl rounded-xl">
+                <div className="w-full p-6 text-left">
                     <ul>
                         <li className="py-6">
                         <h3 className="text-gray-800 md:text-xl xl:text-2xl font-semibold">
@@ -60,7 +60,7 @@ export default function TabCard(props) {
                             
                             </p>
                             <div className="flex items-center w-full">
-                  <button className="focus:outline-none transition duration-150 ease-in-out hover:bg-blue-600 bg-blue-700 rounded text-white px-8 py-2 text-xs sm:text-sm" onClick={()=>{setRedirect(true)}}>Consult</button>
+                  <button className="focus:outline-none transition duration-150 btn-primary" onClick={()=>{setRedirect(true)}}>Consult</button>
 
                 </div>
                             </div>

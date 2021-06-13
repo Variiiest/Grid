@@ -1,4 +1,6 @@
 import axios from 'axios'
+
+import Footer from '../components/Bars/Footer'
 import React, { Component } from 'react'
 import Navbar from '../components/Bars/Navbar'
 import BookCard from '../components/Cards/BookCard'
@@ -22,6 +24,9 @@ constructor(props) {
     
       handleChange(event) {
         this.setState({value: event.target.value});
+        this.setState({ datalab:[] })
+        this.setState({ loaded:false})
+        this.setState({ search: false })
       }
     
   
@@ -45,7 +50,7 @@ constructor(props) {
 
     render() {
         return (
-            <div className="bg-gray-50">
+            <div className="">
 <Navbar/>
 <div className="bg-green-50">
 <div className="container px-5 py-12 mx-auto max-w-5xl bg-green-50">
@@ -72,7 +77,7 @@ constructor(props) {
 
 <div className="lg:flex-grow lg:w-2/3 pl-4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
             <div className="flex items-center w-full mx-auto overflow-hidden text-center rounded-full shadow-lg bg-white border hover:borer-blue-600">
-          <input type="text" name="search" placeholder="Search" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
+          <input type="text" name="search" placeholder="Search for test" className="w-full h-12 px-6 py-2 font-medium text-gray-800 focus:outline-none bg-white" value={this.state.value} onChange={this.handleChange} /> <span className="top-0 right-0 block">
             <button onClick={this.handleSubmit}
               type="button"
               className="inline-flex items-center btn-primary m-2"
@@ -87,10 +92,10 @@ constructor(props) {
 
 
 {(this.state.datalab.length === 0 && this.state.loaded ===false) &&
-                         <div className="p-2">
-                        <p className="text-2xl animate-pulse">Loading ....</p>
-                        
-                        </div>
+                          <div className="p-">
+                          <p className="text-2xl animate-spin"><img alt="/" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" className="w-12 h-12"/></p>
+                          
+                          </div>
                     }
                      {(this.state.datalab.length === 0 &&this.state.loaded) &&
                          <div className="p-2">
@@ -114,6 +119,7 @@ constructor(props) {
      <BookCard data={this.state.datalab} />
 
 </div>
+<Footer/>
 
 
             </div>

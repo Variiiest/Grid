@@ -8,14 +8,14 @@ export class TableList extends Component {
                 <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-100">
                   <div className="flex items-center">
                     <div>
-                      <div className="text-sm leading-5 text-gray-800">1</div>
+                      <div className="text-sm leading-5 text-gray-800">{data.id}</div>
                     </div>
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-100">
-                  <div className="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
+                  <div className="text-sm leading-5 text-blue-900">{data.doctor_name}</div>
                 </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-100 text-sm leading-5">damilareanjorin1@gmail.com</td>
+                <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-100 text-sm leading-5"></td>
                 <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-100 text-sm leading-5">+2348106420637</td>
                 <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-100 text-sm leading-5">
                   <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">

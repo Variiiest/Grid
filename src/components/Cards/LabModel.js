@@ -54,7 +54,7 @@ export class LabModel extends Component {
             <>
                 <div className="flex flex-col p-2" key={this.props.key}>
                     <span onClick={this.handleClick} >
-                        <div className="hover:bg-white hover:shadow-lg  rounded-lg p-5">
+                        <div className="hover:bg-white hover:shadow-2xl border border-white hover:border-green-100  rounded-xl p-5 cursor-pointer ">
                             <div className="flex">
                                 <img alt="mountain" className="w-36 h-36 rounded sm:-ml-0 -ml-12" src="https://image.flaticon.com/icons/png/512/4228/4228742.png" />
                                 <div id="body" className="flex-col ml-5">

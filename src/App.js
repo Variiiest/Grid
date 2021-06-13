@@ -11,6 +11,7 @@ import Profile from './pages/Profile';
 import Orders from './pages/OrderPage';
 import Governent from './components/government/Governent';
 import AppoinmentTable from './pages/AppoinmentTable';
+import GuidesDetail from './pages/GuidesDetail';
 
 
 const GroceryDetail = lazy(() => import('./pages/GroceryDetail'))
@@ -80,6 +81,10 @@ export class App extends Component {
 
             <Route path="/government">
               <Governent />
+            </Route>
+
+            <Route path="/blogdet">
+              <GuidesDetail/>
             </Route>
 
 

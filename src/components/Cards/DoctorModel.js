@@ -85,11 +85,35 @@ export class DoctorModel extends Component {
 
 
       {this.state.showDate?
-  
-      <div className="py-12 bg-gray-100 bg-opacity-20 transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0" id="modal">
+               <>
+             
+
+
+      <div className="py-12 bg-gray-100  transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0" id="modal">
           <div role="alert" className="container mx-auto w-11/12 md:w-2/3 max-w-lg">
               <div className="relative py-8 px-5 md:px-10 bg-white shadow-2xl rounded-lg">
-                   
+              <div className="flex flex-col" key={this.props.key}>
+
+        <div className="rounded-lg">
+      <div className="flex"> 
+        <img alt="mountain" className="w-36 h-36 rounded sm:-ml-0 -ml-12" src="https://image.flaticon.com/icons/png/512/3953/3953004.png" />
+        <div id="body" className="flex-col ml-5">
+        <h2 className="flex-auto lg:text-2xl font-medium text-lg uppercase">{this.props.doctor} {this.props.doctor_id}</h2>
+        
+        <h2 className="flex-auto text-base font-medium py-2">Price :{this.props.price} -/only</h2>
+        
+        <h2 className="flex-auto text-base font-medium py-2 titlecase">{this.props.skill}</h2>
+        <div className="inline-flex items-center">
+                  
+                    <p className="text-base">{this.props.doctoremail}</p>
+                  </div>
+                
+        </div>
+      </div>
+    </div>
+
+    </div>
+  
               <div className="relative mb-4">
         <label htmlFor="full-name" className="leading-7 text-sm text-gray-600">Date</label>
         <input type="date" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={this.state.value} onChange={this.handleChange}/>
@@ -119,7 +143,7 @@ export class DoctorModel extends Component {
               </div>
           </div>
       </div>
- 
+ </>
       
       :null}
 

@@ -15,8 +15,7 @@ export class Home extends Component {
                 <Navbar/>
                 <SearchCard />
               <Toppicks/>
-              <Toppicks/>
-     
+            
                 <Footer />
 
             </div>
