@@ -15,20 +15,7 @@ export class Sidebar extends Component {
                                         </Link>
                                     </div>
                                 </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <div className="flex items-center">
-                                        <Link to="/groceryorders">
-                                        <span className="text-sm">Orders</span>
-                                        </Link>
-                                    </div>
-                                </li>
-                                <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
-                                    <Link to="tests">
-                                    <div className="flex items-center">
-                                        <span className="text-sm">Tests</span>
-                                    </div>
-                                    </Link>
-                                </li>
+                             
                                 <li className="flex w-full justify-between text-gray-600 hover:text-indigo-700 cursor-pointer items-center mb-6">
                                     <div className="flex items-center">
                                         <Link to="profile">
