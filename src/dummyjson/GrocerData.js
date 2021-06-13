@@ -34,7 +34,7 @@ export const GrocerData= [
     {
         id:5,
         name:"Grocery_1",
-        image:"https://images.app.goo.gl/F95t84c5P3U1bq7U9",
+        image:"https://ik.imagekit.io/vpa3fwqdnd/Medical/med3_0ubD51uRv.jpg",
         price:"450/-",
         
         
@@ -42,7 +42,7 @@ export const GrocerData= [
     {
         id:6,
         name:"Grocery_2",
-        image:"https://images.app.goo.gl/5hLgroQd9izx5eDV7",
+        image:"https://ik.imagekit.io/vpa3fwqdnd/Medical/med4_5LJ0yryBq.jpg",
         price:"250/-",
         
         

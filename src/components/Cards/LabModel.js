@@ -63,7 +63,7 @@ export class LabModel extends Component {
                                 <div id="body" className="flex-col ml-5">
                                     <h2 className="flex-auto lg:text-2xl font-medium text-lg uppercase">{this.props.labname}</h2>
 
-                                    <h2 className="flex-auto text-base font-medium py-2">{this.props.price}</h2>
+                                    <h2 className="flex-auto text-base font-medium py-2">Price :{this.props.price}</h2>
 
                                     <h2 className="flex-auto text-base font-medium py-2 titlecase">{this.props.testname}</h2>
                                     <div className="inline-flex items-center">
@@ -93,7 +93,7 @@ export class LabModel extends Component {
                                 <div id="body" className="flex-col ml-5">
                                     <h2 className="flex-auto lg:text-2xl font-medium text-lg uppercase">{this.props.labname}</h2>
 
-                                    <h2 className="flex-auto text-base font-medium py-2">{this.props.price}</h2>
+                                    <h2 className="flex-auto text-base font-medium py-2">Price: {this.props.price}</h2>
 
                                     <h2 className="flex-auto text-base font-medium py-2 titlecase">{this.props.testname}</h2>
                                     <div className="inline-flex items-center">
