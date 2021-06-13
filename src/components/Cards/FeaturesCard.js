@@ -31,7 +31,7 @@ export class FeaturesCard extends Component {
           <div className="h-full shadow-2xl bg-white hover:shadow-xl rounded-xl overflow-hidden border">
             <img className="lg:h-48 bg-gradient-to-b from-green-400 to-green-600  md:h-36 w-full object-cover object-center p-2  hover:scale-110 transform transition duration-700 ease-in-out" src="https://ik.imagekit.io/vpa3fwqdnd/Components/undraw_medical_care_movn_LIKCGrzB4.svg" alt="blog" />
             <div className="p-2">
-              <h1 className="title-font text-xl font-medium text-gray-800 ">Groveries</h1>
+              <h1 className="title-font text-xl font-medium text-gray-800 ">Groceries</h1>
         
             </div>
           </div>

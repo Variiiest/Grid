@@ -53,7 +53,7 @@ export default function TabCard(props) {
                             <p className="pt-2 text-gray-800 text-sm md:text-base xl:text-lg rounded-b-lg">
                             
                                 {props.description} </p>
-                                <h2 className="text-xl text-gray-700 pt-4 font-semibold">Prescription</h2>
+                                <h2 className="text-xl text-gray-700 pt-4 font-semibold">Suggestions</h2>
                             <p className="py-2 text-gray-800 text-sm md:text-base xl:text-lg rounded-b-lg">{props.prescription} 
 
 

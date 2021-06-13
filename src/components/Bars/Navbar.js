@@ -40,6 +40,7 @@ export default function Navbar(props) {
                                         </span>
                                         Labs
                                     </Link>
+{/*                                     
                                     <Link to="/groceries" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -49,6 +50,7 @@ export default function Navbar(props) {
                                         </span>
                                     Grocery
                                     </Link>
+                                     */}
                                     <Link to="/doctors" className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                                         <span className="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -208,7 +210,7 @@ export default function Navbar(props) {
                                                     </div>
                                                 </li>
                                             </Link>
-                                            <Link to="/groceries" className="cursor-pointer">
+                                            {/* <Link to="/groceries" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
@@ -222,7 +224,7 @@ export default function Navbar(props) {
                                                         </div>
                                                     </div>
                                                 </li>
-                                            </Link>
+                                            </Link> */}
                                             <Link to="/doctors" className="cursor-pointer">
                                                 <li className="text-gray-800 pt-8">
                                                     <div className="flex items-center">
