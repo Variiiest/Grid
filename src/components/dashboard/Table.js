@@ -5,7 +5,7 @@ export default function Table() {
   return (
     <div>
                   <div className="py-6 overflow-x-auto lg:py-4">
-        <div className="align-middle inline-block w-full py-4 overflow-hidden bg-white shadow rounded px-12 border">
+        <div className="align-middle inline-block w-full py-4 overflow-hidden bg-white shadow-2xl rounded-xl px-12 border">
           <div className="flex justify-between">
             <div className="inline-flex border rounded w-7/12 px-2 h-12 bg-white">
               <div className="flex flex-wrap items-stretch w-full h-full mb-6 relative">

@@ -12,7 +12,7 @@ export class BookCard extends Component {
         <div className="grid mt-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
           {this.props.data.map((data, key) => (
 
-            <LabModel key={key} labname={data.labname} price={data.price} testname={data.testname} contact_number={data.contact_number} />
+            <LabModel labname={data.labname} price={data.price} testname={data.testname} contact_number={data.contact_number} id={data.diagnoselab_id}/>
           ))}
         </div>
 

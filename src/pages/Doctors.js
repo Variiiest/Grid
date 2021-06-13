@@ -22,6 +22,9 @@ constructor(props) {
 
 handleChange(event) {
   this.setState({value: event.target.value});
+  this.setState({ datadoctor:[] })
+  this.setState({ loaded:false})
+  this.setState({ search: false })
 }
 
 
@@ -87,7 +90,7 @@ this.setState({search : true})
 
 {(this.state.datadoctor.length === 0 && this.state.loaded ===false) &&
                          <div className="p-2">
-                        <p className="text-2xl animate-pulse">Loading ....</p>
+                        <p className="text-xl animate-pulse">Loading ....</p>
                         
                         </div>
                     }

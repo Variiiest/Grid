@@ -37,7 +37,7 @@ constructor(props) {
       res=>{
         this.setState({datalab:res.data.payload})
         this.setState({loaded:true})
-  
+        console.log(res)
       }
     )
     .catch(err =>{
@@ -93,7 +93,7 @@ constructor(props) {
 
 {(this.state.datalab.length === 0 && this.state.loaded ===false) &&
                           <div className="p-">
-                          <p className="text-2xl animate-spin"><img alt="/" src="https://ik.imagekit.io/vpa3fwqdnd/Components/logo135_Wyjf7eIiL.png" className="w-12 h-12"/></p>
+                          <p className="text-xl animate-pulse">Loading .....</p>
                           
                           </div>
                     }

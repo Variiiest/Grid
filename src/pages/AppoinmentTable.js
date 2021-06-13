@@ -127,7 +127,7 @@ export class AppoinmentTable extends Component {
                             <h2 className="text-3xl text-gray-700 mt-4">Appointments</h2>
                             <div className="py-6 overflow-x-auto lg:py-4">
         
-        <div className="align-middle inline-block min-w-full shadow bg-white border overflow-hidden">
+        <div className="align-middle inline-block min-w-full shadow-2xl bg-white rounded-xl  border overflow-hidden">
           <table className="min-w-full">
             <thead className="py-3">
               <tr>
@@ -135,7 +135,8 @@ export class AppoinmentTable extends Component {
                 <th className="px-6 py-3 text-left leading-4 text-blue-500 tracking-wider">Id</th>
                 <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500">Doctor</th>
                 <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500">Price</th>
-                <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500">Status</th>
+                <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500">Start Time</th>
+                <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500 ">Status</th>
                 <th className="px-6 py-3 text-left text-sm leading-4 text-blue-500 ">Date</th>
                 <th className="px-6 py-3  border-gray-300" />
               </tr>

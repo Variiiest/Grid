@@ -32,7 +32,7 @@ export class ProfileCard extends Component {
             <>
                
                 <section className="text-gray-600 body-font pt-6">
-        <div className="container bg-white px-5  py-6 mx-auto flex flex-wrap">
+        <div className="container bg-white shadow-2xl rounded-xl px-5  py-6 mx-auto flex flex-wrap">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-2/3 sm:w-2/3 content-start sm:pr-10">
             <div className="w-full sm:p-4 px-4 mb-6">
                 <p ><span className="p-2 bg-green-100 rounded-full">Verified</span></p>

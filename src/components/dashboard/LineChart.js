@@ -14,24 +14,13 @@ export class LineChart extends Component {
         },
         {
           name: "Disease 2",
-          data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+          data: [15, 51, 18, 14, 13, 16, 11, 10, 16, 81, 5, 0]
         },
         {
           name: 'Disease 3',
-          data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+          data: [8, 7, 4, 11, 5, 38, 62, 47, 12, 56, 45, 47]
         },
-        {
-          name: "Disease 4",
-          data: [15, 2, 8, 4, 3, 2, 2, 20, 6, 2, 13, 13]
-        },
-        {
-          name: "Disease 5",
-          data: [3, 43, 623, 423, 113, 118, 129, 137, 136, 1151, 132, 135]
-        },
-        {
-          name: 'Disease 6',
-          data: [870, 570, 740, 990, 705, 138, 162, 147, 182, 156, 145, 147]
-        }
+    
       ],
       options: {
         chart: {
@@ -104,7 +93,7 @@ export class LineChart extends Component {
     render() {
         return (
             <div>
-                  <div id="chart" className="bg-white shadow border rounded">
+                  <div id="chart" className="bg-green-50 shadow-2xl border rounded-xl">
                   <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={350} />
 </div>
     
