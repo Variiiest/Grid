@@ -20,6 +20,7 @@ export class Register extends Component {
     axios.post('/v1/user/register',data).then(
       res=>{
         console.log(res);
+        alert("Register Successfully.")
       }
     )
 
@@ -52,7 +53,7 @@ export class Register extends Component {
                   </div>
                     <div className="mb-3 flex p-4 mx-2 bg-gray-50 rounded">
 
-                    <input className="w-full text-xs bg-gray-50 outline-none" type="number" placeholder="123456789123" onChange={e=> this.uidai=e.target.value  } />
+                    <input className="w-full text-xs bg-gray-50 outline-none" type="number" placeholder="UIDAI" onChange={e=> this.uidai=e.target.value  } />
 
                     <svg className="h-6 w-6 ml-4 my-auto text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
